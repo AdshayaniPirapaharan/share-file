@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Share } from '@capacitor/core';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,23 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
+
+  async basicShare() {
+    await Share.share({
+      title: 'Report On .......',
+      text: 'Find the report below in the attachemnt',
+      url: 'https://ionicacademy.com/'
+     
+
+
+    });
+  }
+
+  async shareLocalFile() {
+
+  }
+
+
 
 }
