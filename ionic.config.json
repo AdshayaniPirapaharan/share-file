@@ -1,0 +1,7 @@
+{
+  "name": "shareapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
